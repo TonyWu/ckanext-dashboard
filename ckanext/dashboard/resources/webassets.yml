@@ -1,7 +1,8 @@
 main_js:
   extra:
     preload:
-      - viewhelpers/viewhelpers_js
+      - ckanext-viewhelpers/viewhelpers_js
+  output: ckanext-dashboard/%(version)s_main.js
   contents:
     - scripts/dashboard-view.js
     - vendor/jquery.dotdotdot.js
@@ -11,14 +12,16 @@ main_js:
 form_js:
   extra:
     preload:
-     - viewhelpers/viewhelpers_js
+     - ckanext-viewhelpers/viewhelpers_js
+  output: ckanext-dashboard/%(version)s_form.js
   contents:
     - scripts/dashboard-view-edit.js
 
 form_css:
   extra:
     preload:
-     - viewhelpers/viewhelpers_css
+     - ckanext-viewhelpers/viewhelpers_css
+  output: ckanext-dashboard/%(version)s_form.css
   contents:
     - styles/dashboard-view-edit.css
 
@@ -26,7 +29,8 @@ main_css:
   filters: cssrewrite
   extra:
     preload:
-     - viewhelpers/viewhelpers_css
+     - ckanext-viewhelpers/viewhelpers_css
+  output: ckanext-dashboard/%(version)s_main.css
   contents:
     - styles/dashboard-view.css
     - vendor/jquery.gridster.css
